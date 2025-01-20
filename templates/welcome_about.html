@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - PYQ Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #6366f1;
+            --accent-hover: #818cf8;
+            --card-bg: #1e293b;
+            --nav-bg: rgba(30, 41, 59, 0.95);
+            --gradient-start: #1e293b;
+            --gradient-end: #0f172a;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .navbar-brand {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .navbar-brand:hover {
+            color: var(--accent-hover);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-secondary);
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent);
+        }
+
+        /* Content Section Styles */
+        .section-card {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 1.5rem;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15);
+        }
+
+        /* About Header Styles */
+        .about-header {
+            text-align: center;
+            padding: 6rem 0;
+            background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+        }
+
+        .about-header h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--accent), var(--accent-hover));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .about-header .lead {
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Section Styles */
+        .about-section {
+            padding: 2rem 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-section h4 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .about-section p {
+            color: var(--text-secondary);
+            line-height: 1.9;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Team Section Styles */
+        .team-card {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 1.5rem;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-right: 1.5rem;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-info h3 {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .role {
+            color: var(--accent);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .bio {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .skill-tag:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--bg-secondary);
+            padding: 3rem 0;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .about-header {
+                padding: 4rem 0;
+            }
+
+            .about-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-header .lead {
+                font-size: 1.2rem;
+                padding: 0 1rem;
+            }
+
+            .section-card {
+                padding: 2rem;
+            }
+
+            .about-section {
+                padding: 2rem 1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="logocontainer">
+            <a class="navbar-brand" href="/">PYQ Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/welcome_about"><i class="fas fa-info-circle"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="about-header">
+            <div class="container">
+                <h1>About IIITD PYQ Hub</h1>
+                <p class="lead">Your comprehensive resource for past year questions and academic excellence at IIITD</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-card">
+                <div class="about-section">
+                    <h4>Our Mission</h4>
+                    <p>IIITD PYQ Hub is dedicated to empowering students in their academic journey by providing seamless access to past year questions and comprehensive study materials. We believe in fostering collaborative learning and ensuring every student has the resources they need to excel in their studies.</p>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="about-section">
+                    <h4>What We Offer</h4>
+                    <p>Our platform serves as a centralized repository of past year questions from various courses at IIITD, making exam preparation more efficient and structured. We continuously update our collection to ensure you have access to the most relevant and recent materials, helping you better understand course expectations and examination patterns.</p>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="about-section">
+                    <h4>Meet the Team</h4>
+                    <div class="team-card">
+                        <div class="profile-header">
+                            <div class="profile-image"  >V</div>
+                            <div class="profile-info ">
+                                <h3>Vipul Yadav</h3>
+                                <span class="role">Full Stack Developer</span>
+                                
+                                <a href="https://vipul-iiitd.in/" class="role" target="_blank">www.vipul-iiitd.in</a>
+                            </div>
+                        </div>
+                        <p class="bio">"Passionate about creating intuitive educational platforms and empowering students through technology. Building IIITD PYQ Hub to make academic resources more accessible."</p>
+                        <div class="skills">
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Database Design</span>
+                            <span class="skill-tag">Full Stack</span>
+                        </div>
+                        <!-- Site Link -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p class="mb-0">&copy; 2025 PYQ Hub. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/vipul0127" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/vipul-iiitd-87840b308/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://vipul-iiitd.in/" class="social-icon"><i class="fas fa-globe"></i></a>
+                    <a href="https://www.instagram.com/vipul_ydv__/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
