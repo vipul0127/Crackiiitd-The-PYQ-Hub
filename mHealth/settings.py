@@ -9,26 +9,23 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+
 import os
 from pathlib import Path
-LOGIN_REDIRECT_URL = 'subject_page'
-LOGIN_URL = 'login'
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+# Base directory of the project
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
+# Debug and security settings
+DEBUG = True  # Set to False in production
 SECRET_KEY = 'django-insecure-_%&*&aa!*p@s^u7g8_7r@4)bwhies@zsia(hrn%d^ph2fr5r5b'
+ALLOWED_HOSTS = ['*']  # Update with your domain or IP in production
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Login and redirect URLs
+LOGIN_REDIRECT_URL = 'subject_page'
+LOGIN_URL = 'login'
 
-ALLOWED_HOSTS = ['*']  # Add your domain here if deploying to production
-
-# Application definition
-
+# Installed apps
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -36,12 +33,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'login',
+    'login',  # Your custom app
 ]
 
+# Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', 
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # For serving static files in production
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -50,12 +48,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# Root URL configuration
 ROOT_URLCONF = 'mHealth.urls'
 
+# Template settings
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Your templates directory
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,12 +68,10 @@ TEMPLATES = [
     },
 ]
 
+# WSGI application
 WSGI_APPLICATION = 'mHealth.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+# Database settings
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -81,10 +79,7 @@ DATABASES = {
     }
 }
 
-
 # Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -100,74 +95,39 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
-
+# Internationalization settings
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
+# Static and media files
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
 MEDIA_URL = '/subjects/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'subjects')
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
-
-STATIC_URL = '/static/'
-
-# If you're running in development mode, you can also add this:
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-
 # Email settings
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
 EMAIL_HOST_USER = 'vipulkhosya00007@gmail.com'
-EMAIL_HOST_PASSWORD = 'lxadsbcfzfyjqtbp'
-DEFAULT_FROM_EMAIL = 'vipulkhosya00007@gmail.com'
+EMAIL_HOST_PASSWORD = 'lxadsbcfzfyjqtbp'  # Use an environment variable instead of hardcoding
 
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-# Remove manual SMTP connection setup
-# Remove the following lines:
-# import ssl
-# import smtplib
-# smtp_connection = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)
-# smtp_connection.ehlo()
-# smtp_connection.starttls(context=ssl._create_unverified_context())
-
-
-# settings.py
-
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # For database-backed sessions
-# or
-SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'  # For cached sessions
-# or
-SESSION_ENGINE = 'django.contrib.sessions.backends.file'  # For file-based sessions
-# or
-SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'  # For cookie-based sessions
-
-# settings.py
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # For database-backed sessions
+# Session settings
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Use database-backed sessions
 SESSION_COOKIE_NAME = 'sessionid'
 SESSION_COOKIE_HTTPONLY = True
 SESSION_COOKIE_SECURE = False  # Set to True if using HTTPS
 
-
+# OAuth settings (e.g., Google)
 GOOGLE_CLIENT_ID = '639598399328-2c7u8jqpai46cdqp33c26c2tme80re4o.apps.googleusercontent.com'
-GOOGLE_CLIENT_SECRET = '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'
+GOOGLE_CLIENT_SECRET = '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'  # Use environment variables instead of hardcoding
+
+# Whitenoise settings for static files in production
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
