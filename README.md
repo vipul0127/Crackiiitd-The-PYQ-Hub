@@ -93,7 +93,7 @@ So, I created CrackIIITD — a hub where students can **search, browse, and acce
 - **Database:** SQLite (dev), PostgreSQL (prod)  
 - **APIs:** Google Classroom & Google Drive APIs  
 - **Hashing:** SHA-256 (file deduplication)  
-- **Hosting:** Render / Railway / Heroku  
+- **Hosting:** Shared Hosting
 - **Others:** PyPDF2 (file parsing), SpeechRecognition
 
 ---
