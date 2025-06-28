@@ -37,12 +37,12 @@ So, I created CrackIIITD — a hub where students can **search, browse, and acce
 ---
 
 ### 📤 Share Page
-- **Purpose:** Encourage students to contribute new PYQs.
-- **Description:** Logged-in users can upload their own question papers. The backend checks for duplicates using SHA-256 hashing and organizes them accordingly.
-- **Steps:**
-  1. Select course and year
-  2. Upload file (PDF only)
-  3. Auto-categorization and acknowledgment
+- **Purpose:** Help users share the CrackIIITD platform with others.  
+- **Description:** Logged-in users can easily share the website via various platforms to spread the word and encourage more contributions. Sharing options include messaging apps, email, and direct link copy.
+- **Features:**  
+  - One-click share buttons (WhatsApp, Telegram, Email)  
+  - Copy-to-clipboard for quick sharing  
+  - QR code generation for mobile access (optional)
 ![Home Page](images/N5.png)
 ---
 
