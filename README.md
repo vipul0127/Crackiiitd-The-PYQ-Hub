@@ -31,7 +31,9 @@ So, I created CrackIIITD — a hub where students can **search, browse, and acce
   - Semester filter  
   - PDF download links  
   - Automatic preview (optional)
-
+  <img src="images/N3.png" alt="Home Page" width="400"/>
+  <img src="images/N2.png" alt="Home Page" width="400"/>
+  <img src="images/N4.png" alt="Home Page" width="400"/>
 ---
 
 ### 📤 Share Page
@@ -41,7 +43,7 @@ So, I created CrackIIITD — a hub where students can **search, browse, and acce
   1. Select course and year
   2. Upload file (PDF only)
   3. Auto-categorization and acknowledgment
-
+<img src="images/N5.png" alt="Home Page" style="width:100%;"/>
 ---
 
 ### 🔍 Search Page
@@ -60,7 +62,7 @@ So, I created CrackIIITD — a hub where students can **search, browse, and acce
 ### 🛡️ Login & OAuth Integration
 - **Purpose:** Secure sign-in via Google
 - **Description:** No need to register manually — students log in using their official IIITD email. Tokens are securely stored and expire after a session timeout.
-
+<img src="images/N6.png" alt="Home Page" style="width:100%;"/>
 ---
 
 ### 🎙️ Voice Search
