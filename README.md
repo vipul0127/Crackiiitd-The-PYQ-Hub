@@ -49,14 +49,14 @@ So, I created CrackIIITD — a hub where students can **search, browse, and acce
 ### 🔍 Search Page
 - **Purpose:** Quickly find a PYQ by course code, semester, or exam type.
 - **Description:** Search suggestions appear as users type (e.g., typing “MTH” shows `MTH100`, `MTH203`, etc.). Supports voice input too!
-
+![Home Page](images/N7.png)
 ---
 
 ### 🔁 Auto-Sync (Google Classroom)
 - **Purpose:** Automate the collection of PYQs from Google Classroom.
 - **Description:** With user consent, the platform fetches relevant files (Midsem, Endsem, Quiz) from their Google Classroom Drive using API integration, ensuring the database grows passively.
 - **Security:** OAuth login, file scanning, deduplication via hash comparison
-
+![Home Page](images/N8.png)
 ---
 
 ### 🛡️ Login & OAuth Integration
@@ -68,7 +68,7 @@ So, I created CrackIIITD — a hub where students can **search, browse, and acce
 ### 🎙️ Voice Search
 - **Purpose:** Improve accessibility
 - **Description:** Users can search for PYQs by speaking course names or codes — e.g., “Show me CSE101 Midsem”. Especially useful for mobile users.
-
+![Home Page](images/N7.png)
 ---
 
 ## 💡 Features
