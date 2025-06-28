@@ -68,7 +68,7 @@ So, I created CrackIIITD — a hub where students can **search, browse, and acce
 ### 🎙️ Voice Search
 - **Purpose:** Improve accessibility
 - **Description:** Users can search for PYQs by speaking course names or codes — e.g., “Show me CSE101 Midsem”. Especially useful for mobile users.
-![Home Page](images/N7.png)
+![Home Page](images/N9.png)
 ---
 
 ## 💡 Features
