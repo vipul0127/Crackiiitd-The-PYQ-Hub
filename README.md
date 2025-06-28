@@ -20,7 +20,7 @@ So, I created CrackIIITD — a hub where students can **search, browse, and acce
 - **Purpose:** The main dashboard from where users can access features.
 - **Description:** After logging in, users land on the home page which displays a quick search bar, trending courses, and semester-wise navigation.
 - **Screenshot:**
-  <img src="images/pyq-home.jpeg" alt="Home Page" width="400"/>
+  <img src="images/N1.png" alt="Home Page" width="400"/>
 
 ---
 
