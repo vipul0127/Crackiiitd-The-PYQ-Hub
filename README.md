@@ -1,5 +1,5 @@
 # CrackIIITD — The PYQ Hub of IIIT-Delhi
-- **Website:** [Crackiitd.in](https://crackiiitd.in)
+- **Website:** [Crackiiitd.in](https://crackiiitd.in)
 ## Summary
 
 CrackIIITD is a centralized, student-friendly platform built to simplify access to past year question papers (PYQs) at IIIT-Delhi. By integrating with Google Classroom and using automation techniques, the platform gathers and organizes question papers across all courses and years — solving the age-old “where are the PYQs?” problem for students.
