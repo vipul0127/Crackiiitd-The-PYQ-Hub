@@ -1,7 +1,5 @@
 # CrackIIITD — The PYQ Hub of IIIT-Delhi
-<p align="center">
-  <img src="https://drive.google.com/file/d/1AzF6ATCYCvVVhD2aaFtV3S4WlSiucBqR/view?usp=sharing" width="400"/>
-</p>
+[![Watch the demo](https://img.shields.io/badge/Watch-Demo-blue?logo=github)](https://drive.google.com/file/d/1AzF6ATCYCvVVhD2aaFtV3S4WlSiucBqR/view?usp=sharing)
 
 
 - **Website:** [Crackiiitd.in](https://crackiiitd.in)
