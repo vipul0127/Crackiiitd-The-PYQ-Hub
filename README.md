@@ -1,5 +1,5 @@
 # CrackIIITD — The PYQ Hub of IIIT-Delhi
-![Home Page](images/N1.png)
+![Home Page](Crackiitdfinal.gif)
 
 
 - **Website:** [Crackiiitd.in](https://crackiiitd.in)
