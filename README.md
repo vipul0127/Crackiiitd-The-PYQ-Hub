@@ -1,6 +1,6 @@
 # CrackIIITD — The PYQ Hub of IIIT-Delhi
 <p align="center">
-  <img src="https://github.com/vipul0127/Crackiiitd-The-PYQ-Hub/blob/main/Crackiitdfinal.gif" width="400"/>
+  <img src="https://drive.google.com/file/d/1AzF6ATCYCvVVhD2aaFtV3S4WlSiucBqR/view?usp=sharing" width="400"/>
 </p>
 
 
