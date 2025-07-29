@@ -1,6 +1,6 @@
 # CrackIIITD — The PYQ Hub of IIIT-Delhi
 [![Watch the demo](https://img.shields.io/badge/Watch-Demo-blue?logo=github)](https://drive.google.com/file/d/1AzF6ATCYCvVVhD2aaFtV3S4WlSiucBqR/view?usp=sharing)
-![Demo](https://user-images.githubusercontent.com/.../yourfile.gif)
+![Demo](https://github.com/vipul0127/Crackiiitd-The-PYQ-Hub/blob/main/Crackiiitd.gif)
 
 
 - **Website:** [Crackiiitd.in](https://crackiiitd.in)
