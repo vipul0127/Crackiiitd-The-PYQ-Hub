@@ -1,11 +1,11 @@
 # CrackIIITD — The PYQ Hub of IIIT-Delhi
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=y08qhn8pes8&t=19s">
+  <a href="https://github.com/vipul0127/Crackiiitd-The-PYQ-Hub/blob/main/Crackiiitd.gif">
     <img src="https://img.icons8.com/color/480/youtube-play.png" alt="Watch Demo" width="200"/>
   </a>
 </p>
 
-<p align="center"><b><a href="https://github.com/your-username/your-repo-name/raw/main/media/demo.mp4">▶️ Watch Demo Video</a></b></p>
+<p align="center"><b><a href="[Crackiiitd.gif](https://github.com/vipul0127/Crackiiitd-The-PYQ-Hub/blob/main/Crackiiitd.gif)">▶️ Watch Demo Video</a></b></p>
 
 - **Website:** [Crackiiitd.in](https://crackiiitd.in)
 ## Summary
