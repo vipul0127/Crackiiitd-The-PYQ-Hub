@@ -1,5 +1,8 @@
 # CrackIIITD — The PYQ Hub of IIIT-Delhi
-![Image](https://github.com/user-attachments/assets/8be67091-9eb2-4d7a-9edc-dc3416315d26)
+<video width="700" controls>
+  <source src="Crackiiitd-The-PYQ-Hub/blob/main/Crackiitd.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 - **Website:** [Crackiiitd.in](https://crackiiitd.in)
 ## Summary
